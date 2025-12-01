@@ -8,102 +8,116 @@
     <style>
         body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; }
         .hero { background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; padding: 100px 0; text-align: center; }
-        .product { margin: 20px; }
-        footer { background-color: #343a40; color: white; text-align: center; padding: 20px; }
+        .card-img-top { height: 300px; object-fit: cover; border-radius: 15px; }
+        .card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        footer { background-color: #343a40; color: white; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">FashionGenZ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Selamat Datang di FashionGenZ!</h1>
-            <p>Fashion murah, stylish, dan cocok buat Gen Z yang suka trendi tapi hemat. Temukan outfit impianmu di sini!</p>
-            <a href="#products" class="btn btn-light btn-lg">Lihat Produk</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">FashionGenZ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
+</nav>
 
-    <section id="products" class="container my-5">
-        <h2 class="text-center mb-4">Produk Terbaru</h2>
-        <div class="row">
-            <div class="col-md-4 product">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200?text=T-Shirt+GenZ" class="card-img-top" alt="T-Shirt Stylish">
-                    <div class="card-body">
-                        <h5 class="card-title">T-Shirt Oversize Trendy</h5>
-                        <p class="card-text">Harga: Rp50.000 - Stylish dan nyaman!</p>
-                        <a href="#" class="btn btn-primary">Beli Sekarang</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200?text=Jeans+GenZ" class="card-img-top" alt="Jeans Murah">
-                    <div class="card-body">
-                        <h5 class="card-title">Jeans Skinny Gen Z</h5>
-                        <p class="card-text">Harga: Rp75.000 - Murah tapi keren!</p>
-                        <a href="#" class="btn btn-primary">Beli Sekarang</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200?text=Hoodie+GenZ" class="card-img-top" alt="Hoodie Stylish">
-                    <div class="card-body">
-                        <h5 class="card-title">Hoodie Streetwear</h5>
-                        <p class="card-text">Harga: Rp100.000 - Perfect untuk hangout!</p>
-                        <a href="#" class="btn btn-primary">Beli Sekarang</a>
-                    </div>
+<section id="home" class="hero">
+    <div class="container">
+        <h1 class="display-3 fw-bold">FashionGenZ</h1>
+        <p class="lead">Murah, Stylish, dan 100% Cocok Buat Gen Z!</p>
+        <a href="#products" class="btn btn-light btn-lg">Belanja Sekarang</a>
+    </div>
+</section>
+
+<section id="products" class="container my-5">
+    <h2 class="text-center mb-5 fw-bold">Produk Terbaru</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://i.ibb.co/9hL0z3S/oversize-tee.jpg" class="card-img-top" alt="T-Shirt Oversize">
+                <div class="card-body text-center">
+                    <h5 class="card-title">T-Shirt Oversize Gen Z</h5>
+                    <p class="card-text fw-bold text-danger">Rp55.000</p>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">Beli via WA</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="about" class="bg-light py-5">
-        <div class="container text-center">
-            <h2>Tentang Kami</h2>
-            <p>FashionGenZ hadir untuk Gen Z yang ingin tampil stylish tanpa boros. Kami tawarkan fashion murah dari brand lokal dan internasional, dengan pengiriman cepat dan promo menarik!</p>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://i.ibb.co/3yvM0YJ/skinny-jeans.jpg" class="card-img-top" alt="Jeans Skinny">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Jeans Skinny High Waist</h5>
+                    <p class="card-text fw-bold text-danger">Rp85.000</p>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">Beli via WA</a>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <section id="contact" class="container my-5">
-        <h2 class="text-center mb-4">Hubungi Kami</h2>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="name">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://i.ibb.co/6nqYp8Q/hoodie-streetwear.jpg" class="card-img-top" alt="Hoodie Streetwear">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Hoodie Streetwear Oversize</h5>
+                    <p class="card-text fw-bold text-danger">Rp120.000</p>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">Beli via WA</a>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://i.ibb.co/7zX9vKs/cargo-pants.jpg" class="card-img-top" alt="Cargo Pants">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cargo Pants Tactical</h5>
+                    <p class="card-text fw-bold text-danger">Rp110.000</p>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">Beli via WA</a>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Pesan</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://i.ibb.co/4pV6Z3N/varsity-jacket.jpg" class="card-img-top" alt="Varsity Jacket">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Varsity Jacket Korean Style</h5>
+                    <p class="card-text fw-bold text-danger">Rp150.000</p>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">Beli via WA</a>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Kirim</button>
-        </form>
-    </section>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://i.ibb.co/5YkP9mH/flannel-shirt.jpg" class="card-img-top" alt="Flannel Oversize">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Kemeja Flannel Oversize</h5>
+                    <p class="card-text fw-bold text-danger">Rp90.000</p>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">Beli via WA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2023 FashionGenZ. Semua hak dilindungi.</p>
-    </footer>
+<section id="contact" class="bg-light py-5">
+    <div class="container text-center">
+        <h2>Kontak & Order</h2>
+        <p class="lead">Langsung chat WA aja, fast response!</p>
+        <a href="https://wa.me/6281234567890" class="btn btn-success btn-lg">Chat WA Sekarang</a>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+    <p>© 2025 FashionGenZ - Fashion Murah & Stylish buat Gen Z</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
